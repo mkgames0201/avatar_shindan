@@ -1,1 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>METAVERSE AVATAR SYSTEM</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- JavaScript -->
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+
+  <div class="app">
+
+    <!-- 背景 -->
+    <div class="stars"></div>
+    <div class="grid"></div>
+
+    <main class="container">
+
+      <!-- =========================
+           START
+      ========================== -->
+      <section id="startScreen" class="screen active">
+
+        <div class="system-label">
+          METAVERSE PROJECT
+        </div>
+
+        <div class="system-symbol">
+          ◈
+        </div>
+
+        <p class="system-subtitle">
+          AVATAR ANALYSIS SYSTEM
+        </p>
+
+        <h1>
+          あなたの<br>
+          <span>メタバースアバター</span>
+        </h1>
+
+        <p class="description">
+          5つの質問に答えるだけで、<br>
+          あなたがメタバースで<br>
+          どんな存在になるのかを診断します。
+        </p>
+
+        <button id="startButton" class="main-button" type="button">
+          診断をスタート
+          <span>→</span>
+        </button>
+
+        <div class="info-box">
+          <div>
+            <span>所要時間</span>
+            <strong>約1分</strong>
+          </div>
+
+          <div>
+            <span>QUESTIONS</span>
+            <strong>05</strong>
+          </div>
+
+          <div>
+            <span>AVATARS</span>
+            <strong>06</strong>
+          </div>
+        </div>
+
+        <div class="online">
+          <span class="online-dot"></span>
+          SYSTEM ONLINE
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           QUIZ
+      ========================== -->
+      <section id="quizScreen" class="screen">
+
+        <div class="quiz-header">
+
+          <div class="quiz-number">
+            QUESTION
+            <strong id="questionNumber">01</strong>
+            <span>/ 05</span>
+          </div>
+
+          <div class="progress">
+            <div id="progressBar" class="progress-bar"></div>
+          </div>
+
+        </div>
+
+        <div class="question-card">
+
+          <p id="questionCategory" class="question-category">
+            PERSONALITY
+          </p>
+
+          <h2 id="questionText">
+            loading...
+          </h2>
+
+          <div id="answers" class="answers">
+            <!-- JSで回答ボタンを作成 -->
+          </div>
+
+        </div>
+
+        <div class="quiz-footer">
+          <span>SELECT ONE ANSWER</span>
+          <span id="quizStatus">SYSTEM READY</span>
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           RESULT
+      ========================== -->
+      <section id="resultScreen" class="screen">
+
+        <div class="result-top">
+          <span>ANALYSIS COMPLETE</span>
+          <span class="result-line"></span>
+          <span>100%</span>
+        </div>
+
+        <p class="result-label">
+          YOUR METAVERSE AVATAR
+        </p>
+
+        <div id="resultIcon" class="avatar-area">
+          <!-- JSでアバターを作成 -->
+        </div>
+
+        <p id="resultType" class="result-type">
+          TYPE
+        </p>
+
+        <h2 id="personName" class="person-name">
+          NAME
+        </h2>
+
+        <p id="resultDescription" class="result-description">
+          DESCRIPTION
+        </p>
+
+        <div class="result-tags" id="resultTags">
+          <!-- JSでタグを作成 -->
+        </div>
+
+        <div class="result-message">
+          <span class="message-mark">◆</span>
+          <p id="resultMessage">
+            あなたのメタバースでの可能性を発見しました。
+          </p>
+        </div>
+
+        <button id="retryButton" class="main-button" type="button">
+          もう一度診断する
+          <span>↻</span>
+        </button>
+
+      </section>
+
+    </main>
+
+  </div>
+
+</body>
+</html>
